@@ -4,45 +4,59 @@ import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
 
 const Hero = () => {
-  const StyledHero = styled("div")(() => ({
-    backgroundColor: "red",
+  const StyledHero = styled("div")(({theme}) => ({
+    backgroundColor: theme.palette.primary.main,
     height: "100vh",
+    display: 'flex',
+    alignItems: 'center'
   }));
 
-  const StyledImg = styled("img")(() => ({
-    width: "100%",
+  const StyledImg = styled("img")(({theme}) => ({
+    width: "80%",
     borderRadius: "50%",
+    border: `1px solid ${theme.palette.primary.contrastText}`
   }));
 
   return (
     <>
-      <h1>HERO component</h1>
       <StyledHero>
         <Container maxWidth='lg'>
           <Grid container spacing={2}>
-            <Grid size={{ xs: 12, md: 4 }}>
+            <Grid size={{ xs: 12, md: 5 }}>
               <StyledImg src={profilePhoto} />
             </Grid>
-            <Grid size={{ xs: 12, md: 8 }}>
-              <Typography variant="h1" textAlign={"center"} color="primary">
+            <Grid size={{ xs: 12, md: 7 }}>
+              <Typography variant="h1" textAlign={"center"} color="primary.contrastText">
                 Matheus Páscui
               </Typography>
-              <Typography variant="h2" textAlign={"center"}>
+              <Typography variant="h2" textAlign={"center"} color="primary.contrastText">
                 I'm a Software Engineer
               </Typography>
 
               <Grid container display='flex' justifyContent={'center'}>
-                <Grid size={{ xs: 12, md: 4 }} display="flex" justifyContent={"center"}>
-                  <Button>
-                    <DownloadIcon />
-                    Download CV
+                <Grid size={{ xs: 12, md: 4 }} display="flex" 
+                      justifyContent={"center"} 
+                      paddingBottom={'10px'}
+                      paddingTop={'10px'}>
+                  <Button color="secondary" 
+                          variant="contained"
+                          startIcon={<DownloadIcon />}
+                  >
+                    <Typography>
+                      Download CV
+                    </Typography>
                   </Button>
                 </Grid>
 
-                <Grid size={{ xs: 12, md: 4 }} display="flex" justifyContent={"center"}>
-                  <Button>
-                    <EmailIcon />
-                    Contact Me
+                <Grid size={{ xs: 12, md: 4 }} display="flex" 
+                      justifyContent={"center"}
+                      paddingBottom={'10px'}
+                      paddingTop={'10px'}>
+                  <Button color="secondary" 
+                          variant="contained"
+                          startIcon={<EmailIcon/>}
+                  >
+                    <Typography>Contact Me</Typography>
                   </Button>
                 </Grid>
               </Grid>
