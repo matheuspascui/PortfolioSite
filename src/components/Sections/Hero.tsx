@@ -1,7 +1,8 @@
-import { Button, Container, Grid, styled, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, styled, Typography } from "@mui/material";
 import profilePhoto from "../../assets/images/profilePhoto.jpeg";
 import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
+import {AnimatedBackground} from '../AnimatedBackground/AnimatedBackground'
 
 const Hero = () => {
   const StyledHero = styled("div")(({theme}) => ({
@@ -23,21 +24,26 @@ const Hero = () => {
         <Container maxWidth='lg'>
           <Grid container spacing={2}>
             <Grid size={{ xs: 12, md: 5 }}>
-              <StyledImg src={profilePhoto} />
+              <Box position={'relative'}>
+                <Box position={'absolute'} width={'150%'} top={-100} right={0}>
+                  <AnimatedBackground></AnimatedBackground>
+                </Box>
+                <Box position={'relative'} textAlign={'center'}>
+                  <StyledImg src={profilePhoto} />
+                </Box>
+              </Box>
             </Grid>
             <Grid size={{ xs: 12, md: 7 }}>
               <Typography variant="h1" textAlign={"center"} color="primary.contrastText">
                 Matheus Páscui
               </Typography>
-              <Typography variant="h2" textAlign={"center"} color="primary.contrastText">
+              <Typography variant="h2" textAlign={"center"} color="primary.contrastText" pb={2}>
                 I'm a Software Engineer
               </Typography>
 
-              <Grid container display='flex' justifyContent={'center'}>
+              <Grid container display='flex' justifyContent={'center'} pt={3}>
                 <Grid size={{ xs: 12, md: 4 }} display="flex" 
-                      justifyContent={"center"} 
-                      paddingBottom={'10px'}
-                      paddingTop={'10px'}>
+                      justifyContent={"center"}>
                   <Button color="secondary" 
                           variant="contained"
                           startIcon={<DownloadIcon />}
@@ -49,9 +55,7 @@ const Hero = () => {
                 </Grid>
 
                 <Grid size={{ xs: 12, md: 4 }} display="flex" 
-                      justifyContent={"center"}
-                      paddingBottom={'10px'}
-                      paddingTop={'10px'}>
+                      justifyContent={"center"}>
                   <Button color="secondary" 
                           variant="contained"
                           startIcon={<EmailIcon/>}
