@@ -14,6 +14,7 @@ const NavBar = () => {
           <MenuItem>About</MenuItem>
           <MenuItem>Skills</MenuItem>
           <MenuItem>Projects</MenuItem>
+          <MenuItem>Business Card</MenuItem>
         </StyledToolbar>
       </AppBar>
     </>
