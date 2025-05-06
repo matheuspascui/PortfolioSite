@@ -69,7 +69,7 @@ const Hero = () => {
 
               <Grid container display='flex' justifyContent={'center'} pt={3}>
                 <Grid size={{ xs: 12, md: 4 }} display="flex" 
-                      justifyContent={"center"}>
+                      justifyContent={"center"} pb={3}>
                   <Button color="secondary" 
                           variant="contained"
                           startIcon={<DownloadIcon />}
@@ -82,7 +82,7 @@ const Hero = () => {
                 </Grid>
 
                 <Grid size={{ xs: 12, md: 4 }} display="flex" 
-                      justifyContent={"center"}>
+                      justifyContent={"center"} pb={3}>
                   <Button color="secondary" 
                           variant="contained"
                           startIcon={<EmailIcon/>}
