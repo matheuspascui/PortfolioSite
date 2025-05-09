@@ -1,5 +1,5 @@
 import { AppBar, MenuItem, styled, Toolbar } from "@mui/material";
-import { replace, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 const NavBar = () => {
