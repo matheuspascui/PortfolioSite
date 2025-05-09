@@ -1,4 +1,3 @@
-import NavBar from "../NavBar/NavBar";
 import theme from "../../theme";
 import { Box, styled, Grid, Container } from "@mui/material";
 import Typography from "@mui/material/Typography";
