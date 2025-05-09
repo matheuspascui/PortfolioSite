@@ -92,7 +92,7 @@ const BusinessCard = () => {
               justifyContent={"space-between"}
               display={"flex"}
             >
-              <StyledAnchor href="" target="_blank">
+              <StyledAnchor href="/">
                 <StyledIconImg src={laptopIcon} />
                 <p>My Portfolio</p>
               </StyledAnchor>
