@@ -8,6 +8,9 @@ let theme = createTheme({
     secondary: {
       main: "#4f8e3e",
     },
+    warning: {
+      main: '#f79256'
+    }
   },
   typography: {
     fontFamily: "sans-serif",

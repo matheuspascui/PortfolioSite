@@ -5,7 +5,7 @@ const Home = () => {
 
     return (
       <>
-        <NavBar></NavBar>
+        <NavBar/>
         <Hero/>
       </>
     )
