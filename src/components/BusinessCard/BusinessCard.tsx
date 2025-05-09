@@ -51,6 +51,15 @@ const BusinessCard = () => {
     },
   }));
 
+  const handleEmail = () => {
+    const emailAddress = 'matheuspascui@gmail.com';
+    const subject = 'Subject';
+    const body = 'Hello! I saw your portfolio...';
+
+    const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(mailtoLink);
+  };
+
   return (
     <>
       <StyledDiv>
@@ -104,10 +113,11 @@ const BusinessCard = () => {
               display={"flex"}
             >
               <StyledAnchor
-                href="https://www.linkedin.com/in/matheuspascui/"
+                onClick={handleEmail}
+                href='#'
                 target="_blank"
               >
-                <StyledIconImg src={mailIcon} />
+                <StyledIconImg src={mailIcon}/>
                 <p>E-Mail</p>
               </StyledAnchor>
             </Grid>
