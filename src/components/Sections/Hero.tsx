@@ -64,7 +64,7 @@ const Hero = () => {
                 Matheus Páscui
               </Typography>
               <Typography variant="h2" textAlign={"center"} color="primary.contrastText" pb={2}>
-                I'm a Software Engineer
+                I'm a Full Stack Developer
               </Typography>
 
               <Grid container display='flex' justifyContent={'center'} pt={3}>

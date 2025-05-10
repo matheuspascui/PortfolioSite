@@ -90,7 +90,7 @@ const BusinessCard = () => {
                 textAlign={"center"}
                 color="primary.main"
               >
-                Software Developer
+                Full Stack Developer
               </Typography>
             </Grid>
           </Grid>
